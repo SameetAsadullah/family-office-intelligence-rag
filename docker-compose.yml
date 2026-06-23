@@ -1,0 +1,35 @@
+name: family-office-rag
+
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - .env.docker.example
+    environment:
+      OLLAMA_BASE_URL: ${COMPOSE_OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      CHROMA_PATH: /app/vector_db
+      DATA_PATH: /app/data/family_offices_final.xlsx
+      CHAT_HISTORY_PATH: /app/state/chat_history.sqlite3
+    ports:
+      - "${STREAMLIT_PORT:-8501}:8501"
+    volumes:
+      - ./data:/app/data:ro
+      - ./vector_db:/app/vector_db
+      - ./state:/app/state
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles:
+      - local-ollama
+    ports:
+      - "${OLLAMA_PORT:-11434}:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-models:
