@@ -1,0 +1,32 @@
+[
+  {
+    "query": "Which family offices invest in healthcare?",
+    "expected_family_offices": ["JCAP"],
+    "expected_source_domains": ["jcapasia.com"],
+    "expected_doc_types": ["investment_profile"]
+  },
+  {
+    "query": "Which family offices have climate or sustainability investment exposure?",
+    "expected_family_offices": ["S2G Investments", "Emerson Collective"],
+    "expected_source_domains": ["s2ginvestments.com", "emersoncollective.com"],
+    "expected_doc_types": ["investment_profile"]
+  },
+  {
+    "query": "Show European family offices with venture activity.",
+    "expected_family_offices": ["Reimann Investors", "Verlinvest", "Aglaé Ventures"],
+    "expected_source_domains": ["reimann-investors.com", "verlinvest.com", "aglaeventures.com"],
+    "expected_doc_types": ["investment_profile"]
+  },
+  {
+    "query": "Which family offices have real estate exposure?",
+    "expected_family_offices": ["Grosvenor", "Wittington Investments"],
+    "expected_source_domains": ["grosvenor.com", "wittington-investments.co.uk"],
+    "expected_doc_types": ["investment_profile"]
+  },
+  {
+    "query": "Which family offices have recent investment activity?",
+    "expected_family_offices": ["S2G Investments", "Ballmer Group"],
+    "expected_source_domains": ["s2ginvestments.com", "ballmergroup.org"],
+    "expected_doc_types": ["recent_activity_profile"]
+  }
+]

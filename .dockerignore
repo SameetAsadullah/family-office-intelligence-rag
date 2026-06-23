@@ -1,0 +1,16 @@
+.DS_Store
+.git/
+.env
+.env.docker
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+vector_db/*
+!vector_db/.gitkeep
+state/
+data/*.pre_production_backup.xlsx
+family_offices_dataset.xlsx
