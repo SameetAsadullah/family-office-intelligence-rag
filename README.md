@@ -202,4 +202,4 @@ docker compose exec ollama ollama pull qwen3:8b
 docker compose exec ollama ollama pull bge-m3
 ```
 
-For assessment review, the local demo path highlights the full pipeline: Ollama running, ingestion succeeding, retrieval/reranking logs in the terminal, and Streamlit returning grounded answers with source chips.
+For end-to-end review, the local execution path covers the full pipeline: Ollama running, ingestion succeeding, retrieval/reranking logs in the terminal, and Streamlit returning grounded answers with source chips.
