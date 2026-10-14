@@ -18,6 +18,8 @@ XLSX workbook
 
 The UI never talks directly to Chroma. Ingestion runs independently from the application, vector-store access is isolated in `src/vectorstore`, retrieval is isolated in `src/retrieval`, and user workflows go through `src/services`.
 
+At query time, structured filters narrow the vector search. The optional local reranker selects the strongest evidence from the retrieved candidates before answer generation. Answers carry source metadata through to the Streamlit source chips so readers can inspect the supporting records.
+
 ## Local-First Setup With Ollama
 
 1. Install Ollama from https://ollama.com/download
