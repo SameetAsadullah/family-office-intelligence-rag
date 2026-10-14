@@ -1,6 +1,6 @@
-# Family Office Intelligence RAG
+# Family Office RAG
 
-Family Office Intelligence RAG is a production-shaped Micro-RAG pipeline for querying a validated family office intelligence workbook. It ingests curated evidence records, stores vectors in ChromaDB, applies structured retrieval and reranking, and answers questions through Streamlit with grounded source chips.
+Family Office RAG is a production-shaped Micro-RAG pipeline for querying a validated family office intelligence workbook. It ingests curated evidence records, stores vectors in ChromaDB, applies structured retrieval and reranking, and answers questions through Streamlit with grounded source chips.
 
 ## Architecture
 

@@ -332,15 +332,15 @@ def run_query(query: str, settings, filters, chat_history: ChatHistoryService) -
 
 def main() -> None:
     configure_logging()
-    st.set_page_config(page_title="Family Office Intelligence RAG", layout="wide")
+    st.set_page_config(page_title="Family Office RAG", layout="wide")
     try:
         settings = get_settings()
     except ProviderConfigError as exc:
-        st.title("Family Office Intelligence RAG")
+        st.title("Family Office RAG")
         st.error(str(exc))
         return
 
-    st.title("Family Office Intelligence RAG")
+    st.title("Family Office RAG")
     chat_history = ChatHistoryService(settings.chat_history_path)
     filters = render_sidebar(settings, chat_history)
 

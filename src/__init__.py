@@ -1,1 +1,1 @@
-"""Family Office Intelligence RAG package."""
+"""Family Office RAG package."""
